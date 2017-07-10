@@ -3,14 +3,10 @@ package yourname.example.com.project_ice;
 import android.Manifest;
 import android.content.Context;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Process;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ImageButton;
 
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import yourname.example.com.project_ice.WeatherReport.WeatherReport;
 
@@ -29,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         int permissionCheck = (checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION,
                 getCallingPid(),getCallingUid())); // Determines whether the current process has
                 // permission to get the currrent
-        double CoordX = 0; // I'm aware this is disgusting and sloppy but it wouldn't let me
-        double CoordY = 0; // declare these as null
+        double CoordX = 37.8267; // I'm aware this is disgusting and sloppy but it wouldn't let me
+        double CoordY = -122.4233; // declare these as null
         if(permissionCheck == PERMISSION_GRANTED)
         {
             Location lastKnownLocation = locationManager.getLastKnownLocation(locationProvider);
