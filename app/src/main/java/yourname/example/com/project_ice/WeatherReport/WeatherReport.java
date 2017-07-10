@@ -13,7 +13,7 @@ import yourname.example.com.project_ice.MainActivity;
  * Currently trying to mimic the behavior of http://www.studytrails.com/java/json/java-org-json/
  */
 public class WeatherReport extends MainActivity {
-    public WeatherReport(int CoordX, int CoordY, String Method, boolean debugging) { // Constructor
+    public WeatherReport(double CoordX, double CoordY, String Method, boolean debugging) { // Constructor
         if (Method.equals("TimeMachine"))
         {
             System.out.println("The called method was Time Machine");
