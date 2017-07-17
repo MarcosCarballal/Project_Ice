@@ -6,10 +6,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Created by marco on 7/10/2017.
+ * Created by marcos on 7/10/2017.
  */
 
-public class GetHTML {
+public class GetHTML
+{
 
     public static String getHTML(String urlToRead) throws Exception {
         StringBuilder result = new StringBuilder();
@@ -22,11 +23,6 @@ public class GetHTML {
             result.append(line);
         }
         rd.close();
-        return result.toString();
-    }
-
-    public static void main(String[] args) throws Exception
-    {
-        System.out.println(getHTML(args[0]));
+        return result.toString(); // Returns the whole JSON response
     }
 }

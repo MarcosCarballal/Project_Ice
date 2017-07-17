@@ -13,26 +13,28 @@
         app:srcCompat="@drawable/locationflag"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.579"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/gear"
-        tools:layout_editor_absoluteY="455dp"
-        tools:layout_editor_absoluteX="313dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/info"
-        tools:layout_editor_absoluteY="435dp"
-        tools:layout_editor_absoluteX="16dp" />
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -41,26 +43,19 @@
         android:layout_height="50dp"
         ads:adUnitId="YOUR_AD_UNIT_ID"
         ads:adSize="SMART_BANNER"
-        tools:layout_editor_absoluteY="455dp"
-        ads:layout_constraintRight_toLeftOf="@+id/imageButton2"
-        android:layout_marginRight="8dp"
-        android:layout_marginEnd="8dp" />
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/locationbutton"
+        ads:layout_constraintVertical_bias="0.686"
+        ads:layout_constraintRight_toRightOf="parent"
+        ads:layout_constraintLeft_toLeftOf="parent" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="20dp"
-        android:orientation="horizontal" />
+        app:layout_constraintGuide_begin="84dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="84dp" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Set My Location"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="height/2" />
 </android.support.constraint.ConstraintLayout>
