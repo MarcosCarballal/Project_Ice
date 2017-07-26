@@ -1,3 +1,4 @@
+
 package yourname.example.com.project_ice;
 
 /**
@@ -5,21 +6,14 @@ package yourname.example.com.project_ice;
  */
 
 class HourlyReport extends WeatherReport { //Is this a subclass of WeatherReport??
-    public int UnixTime;
+    public int time;
     public String summary;
     public String icon;
-    public float precipIntensity;
-    public float precipProbability;
-    public float temperature;
-    public float dewPoint;
-    public float humidity;
-    public float WindSpeed;
-    public float windGust;
-    public float windBearing;
-    public float cloudCover;
-    public float ozone;
-    public HourlyReport(String unparsedHourlyContent) {
-
+    public int precipIntensity;
+    public int precipProbability;
+    public HourlyReport() {
+        super(); // Constructor
 
     }
 }
+
