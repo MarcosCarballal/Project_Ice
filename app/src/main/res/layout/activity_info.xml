@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the info page which will be set for providing API info and version info" />
+        android:text="Frost is a mobile application created by Marcos Carballal and Varun Ramakrishnan, two students at the University of Pennsylvania studying computer science. This application aims to alleviate the issue of frozen-over car windshields." />
 </LinearLayout>
