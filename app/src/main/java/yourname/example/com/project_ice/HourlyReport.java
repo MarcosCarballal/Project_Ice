@@ -5,7 +5,7 @@ package yourname.example.com.project_ice;
  * Created by marco on 7/17/2017.
  */
 
-class HourlyReport extends WeatherReport { //Is this a subclass of WeatherReport??
+class HourlyReport extends WeatherReport {
     public int time;
     public String summary;
     public String icon;

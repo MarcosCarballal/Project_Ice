@@ -5,7 +5,11 @@ import org.json.JSONObject;
 import android.graphics.Region;
 import android.util.Log;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.lang.reflect.Array;
+import java.util.Scanner;
 
 
 import static yourname.example.com.project_ice.GetHTML.getHTML;
@@ -35,11 +39,19 @@ public class WeatherReport{
             // Find the start of day in Unix time to add onto the request
             long millis = System.currentTimeMillis();
             long unixTime = millis / 1000;
-            Log.d(TAG, "The Unix time called was " + unixTime);
-            String url = "https://api.darksky.net/forecast/f060c1a85d245405e10edd9d1a2b5ced/"
-                    + CoordX + "," +CoordY + "," + unixTime; // Was told not to embed private key into Java code but
-            // can't quite find how to implement it otherwise.giy
+            String key = "";
+            try {
+                FileReader fr = new FileReader("app/src/main/assets/apikey.txt");
+                Scanner s = new Scanner(fr);
+                key = s.nextLine();
 
+            } catch (FileNotFoundException e){
+                System.exit(5);
+            }
+
+            Log.d(TAG, "The Unix time called was " + unixTime);
+            String url = "https://api.darksky.net/forecast/" + key + "/"
+                    + CoordX + "," +CoordY + "," + unixTime;
             String result;
             System.out.println("The url being called is " + url);
             try { // Contacts the DarkSky API
@@ -61,7 +73,6 @@ public class WeatherReport{
                 latitude = longitude = offset = 0;
                 timezone = "None";
                 hourlyReports = null;
-
             }
             else{
                 System.out.println("WeatherReport was successful");

@@ -11,9 +11,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class WeatherReportTest {
     @Test
-    public void returns_report (){
-        WeatherReport myWeather = new WeatherReport(0.0,0.0, "TimeMachine"); // Test connection
-        assertEquals("Hi","Hi"); // Since there is no
-
+    public void constructor_runs (){
+        WeatherReport myWeather = new WeatherReport(0.0,0.0, "TimeMachine");
     }
 }
